@@ -21,6 +21,17 @@ class LinkedList:
     def __init__(self):
         self.head=None
 
+    #function for traversing through linked list
+    def PrintList(self):
+        # initially I think that this is starting at 1
+        temp = self.head
+
+        # while temp is true (as long as it is not empty) continue printing the value
+        while (temp):
+            print(temp.value)
+            # go to the next Node
+            temp=temp.next
+
 if __name__=="main":
 
     # Creating and empty list
