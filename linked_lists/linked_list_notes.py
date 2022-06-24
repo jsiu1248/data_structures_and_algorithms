@@ -20,3 +20,19 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head=None
+
+if __name__=="main":
+
+    # Creating and empty list
+    llist= LinkedList()
+
+    # creating the three Nodes
+    llist.head=Node(1)
+    second=Node(2)
+    third=Node(3)
+
+    # link first node with the second
+    llist.head.next = second
+
+    # link second node with the third
+    second.next = third
