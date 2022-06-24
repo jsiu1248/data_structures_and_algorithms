@@ -15,3 +15,8 @@ class Node:
     def __init__(self, value):
         self.value = value # Assign data/value
         self.next = None # next starts off as null
+
+#class for linked list
+class LinkedList:
+    def __init__(self):
+        self.head=None
