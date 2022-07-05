@@ -31,6 +31,22 @@ class LinkedList:
             print(temp.value)
             # go to the next Node
             temp=temp.next
+    #function to push new node in the front
+    def push(self, new_value):
+        # make a new node with a value
+        new_node = Node(new_value)
+
+        # make next of Node as head
+        new_node.next = self.head
+
+        # move head to point to new node
+        self.head= new_node
+
+"""
+3 ways to insert a new node
+1. in the front - push
+2. after give node
+3. at the end"""
 
 if __name__=="main":
 
