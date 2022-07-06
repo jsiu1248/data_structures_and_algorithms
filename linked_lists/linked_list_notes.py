@@ -41,6 +41,29 @@ class LinkedList:
 
         # move head to point to new node
         self.head= new_node
+# Time complexity is O(1)
+
+    #function to add a node after a given node
+    def insertAfter(self,prev_node, new_value):
+
+        # check if the prev_node exists
+        if prev_node is None:
+            print("The previous node is not in the linked list.")
+            return
+        #make a node with a value
+        new_node = Node(new_value)
+
+        # make next of new node as next of prev_node
+        new_node.next = prev_node.next
+
+        # make next of prev_node as new_node
+        prev_node.next = new_node
+
+        # Time Complexity is O(n) because it depends on the size of list
+
+
+
+
 
 """
 3 ways to insert a new node
