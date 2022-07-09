@@ -60,6 +60,36 @@ class LinkedList:
         prev_node.next = new_node
 
         # Time Complexity is O(n) because it depends on the size of list
+        # Space Complexity: O(1) constant space to modify pointers
+
+    # function to add node at the end
+    def append(self, new_value):
+
+        #make a node with a value
+        new_node = Node(new_value)
+
+        # check if linked list is empty then make new node as head
+        if self.head is None:
+            self.head=new_node
+            return
+
+        # traverse until the last node
+        # temporarily making the last variable the first node
+        last = self.head
+        while (last.next):
+            last = last.next
+
+        # change the next of last node
+        last.next = new_node
+
+        # Time complexity is O(n) since it is a loop from head to end
+        # Space is O(1) by keeping extra pointer to the tail
+        """
+        Questions:
+        How to calculate time and space complexity?
+        """
+
+
 
 
 
@@ -86,3 +116,9 @@ if __name__=="main":
 
     # link second node with the third
     second.next = third
+
+    llist.append(5)
+    llist.push(7)
+    llist.insertAfter(llist.head.next, 5)
+    print("x")
+    llist.PrintList()
