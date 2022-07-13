@@ -31,7 +31,14 @@ class LinkedList:
             print(temp.value)
             # go to the next Node
             temp=temp.next
+
+        """
+3 ways to insert a new node
+1. in the front - push
+2. after give node
+3. at the end"""
     #function to push new node in the front
+
     def push(self, new_value):
         # make a new node with a value
         new_node = Node(new_value)
@@ -84,6 +91,24 @@ class LinkedList:
 
         # Time complexity is O(n) since it is a loop from head to end
         # Space is O(1) by keeping extra pointer to the tail
+"""
+3 ways to delete
+1. delete from beginning
+    a. point head to the next node
+2. delete from middle
+    a. traverse to the element before the element that needs
+    to be deleted
+    b. change next pointer to exclude the node from the chain
+
+3. delete from the end
+    a. point head to the second to the last element
+    b. change next pointer to null
+"""
+def deleteNode(self, key):
+        pass
+
+
+
         """
         Questions:
         How to calculate time and space complexity?
@@ -95,11 +120,8 @@ class LinkedList:
 
 
 
-"""
-3 ways to insert a new node
-1. in the front - push
-2. after give node
-3. at the end"""
+
+
 
 if __name__=="main":
 
@@ -120,5 +142,4 @@ if __name__=="main":
     llist.append(5)
     llist.push(7)
     llist.insertAfter(llist.head.next, 5)
-    print("x")
     llist.PrintList()
