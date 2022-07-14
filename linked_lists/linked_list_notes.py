@@ -105,7 +105,33 @@ class LinkedList:
     b. change next pointer to null
 """
 def deleteNode(self, key):
-        pass
+        # store head node temporarily
+        temp = self.head
+
+        # if head node holds the key to be deleted
+        if temp.data == key:
+            # make head node the temp's next node
+            self.head = temp.next
+            temp = None
+            return
+
+        # search for key to be deleted
+        # keep track of the previous node as we need to
+        # change 'prev.next'
+        while temp is not None:
+            if temp.data == key:
+                break
+            prev = temp
+            temp = temp.next
+
+        # if key was not present in linked list
+        if temp == None:
+            return
+
+        # unlink the node from linked list
+        prev.next = temp.next
+
+        temp = None
 
 
 
