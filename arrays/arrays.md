@@ -14,3 +14,10 @@
 # store same data type
 # when size of data is known
 # lookup tables
+
+# different data types have different sizes/bytes
+
+# typecode - returns the data type
+# itemsize - size of single array element
+# buffer_info - address of where array is stored
+
